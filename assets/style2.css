@@ -1,0 +1,117 @@
+body {
+    height: 800px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: antiquewhite;
+    background-image: url("Assets/images/rectangle-lace.png");
+        background-size: 110%;
+        background-position: center;
+        background-repeat:no-repeat;
+        
+}
+.topcontainer{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    height:800px;
+    gap: 40px;
+    justify-content: 20px;
+    padding-top: 20px;
+
+}
+.firstbox{ 
+    padding: 20px;
+    width: 90%;
+    max-width:800px;
+    background-color: sienna;
+    border-radius: 5%;
+    outline: 6px solid sienna;
+    outline-offset: 2px;
+    border: 2px dashed antiquewhite;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
+    color: antiquewhite;
+}
+.secondbox{
+    padding: 10px;
+    width: 45%;
+    height: 200px;
+    background-color: sienna;
+    border-radius: 5%;
+    outline: 6px solid sienna;
+    outline-offset: 2px;
+    border: 2px dashed antiquewhite;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    text-align: center;
+    font-size:medium;
+    color: antiquewhite; 
+}
+.thirdbox{
+    position: static;
+    margin-left: auto;
+    margin-top: 40px;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    width: 45%; 
+    height: 200px;
+    background-color: sienna;
+    border-radius: 5%;
+    outline: 6px solid sienna;
+    outline-offset: 2px;
+    border: 2px dashed antiquewhite;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: large;
+    color: antiquewhite; 
+  
+}
+.cheer-girl-img,
+.baseball-boy-img {
+    width: 280px;
+    height: 266px;
+}
+.cg-wrapper {
+    position: absolute;
+    top: 40px;
+    right: 20%; 
+    transform: translateX(50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bb-wrapper {
+    position: absolute;
+    bottom: 60px;
+    left: 20%; 
+    transform: translateX(-50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button {
+    display: inline-block;
+    margin-top: 8px;
+    background-color: sienna;
+    border: none;
+    border-radius: 20%;
+    color: antiquewhite;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgb(255, 228, 196);
+    color: sienna;
+    cursor: pointer;
+}
+

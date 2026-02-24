@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+.stack-container {
+    position: relative;
+    width: 70vw;
+    height: auto;
+    aspect-ratio: 7 / 6;
+    max-width: 100%;
+    max-height: 60vh;
+    /* Lock: don't shrink below this so overlay/stacking can't break */
+    min-width: 280px;
+    min-height: 240px;
+    flex-shrink: 0;
+}
+.mainbox {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: sienna;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    font-size: clamp(0.8rem, 3vw, 2rem);
+    text-align: center;
+}
+.art-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+}
+
+.art-img:hover {
+    opacity: 0;
+}
+
+.frame-layer {
+    position: absolute;
+    left: -35%;
+    bottom:-35%;
+    right:-35%;
+    top:-51%;
+    z-index: 3;
+    pointer-events: none;
+}
+.framer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.button1, .button2 {
+    position: fixed;
+    bottom: 2vh;
+    background-color: sienna;
+    border: none;
+    border-radius: 20%;
+    padding: 16px 28px;
+    color: antiquewhite;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.button2 { 
+ right:2vw;
+}
+
+.button1 { 
+left:2vw;
+}
+.button1:hover {
+    background-color: rgb(255, 228, 196);
+    color: sienna;
+    cursor: pointer;
+}
+.button2:hover {
+    background-color: rgb(255, 228, 196);
+    color: sienna;
+    cursor: pointer;
+}

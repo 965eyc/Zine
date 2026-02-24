@@ -1,0 +1,90 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+.background-image{
+    position:absolute;
+    inset:0;
+    background-image: url("assets/images/i-spy-recovered.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: blur 30s ease-in-out infinite;
+            z-index: -1;
+}
+#overlay {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+     width:600px;
+            }
+.frame-img {
+              display: block;
+              width: 110%;
+            }
+.EndBox1 { 
+    position: relative;
+    padding: 25px;
+    width: 400px;
+    height:600px;
+    background-color: sienna;
+    border-radius: 2%;
+    text-align: center;
+    font-size:medium;
+    color: antiquewhite;
+}
+.sound-img {
+    width:120px;
+    position:absolute;
+    top: 10px;
+    left: 50%;
+    transform:translateX(-50%);
+    cursor:pointer;
+
+}
+.audioplayer {
+    position: absolute;
+    top: 125px;
+    left:50%;
+    transform: translateX(-50%);
+    width:200px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+    .audioplayer:hover {
+    opacity: 1;
+}
+.button1 {
+    position: absolute;
+    bottom:40px;
+    width: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.4;
+    background-color:antiquewhite;
+    border: none;
+    border-radius: 20%;
+    color: rgb(70, 0, 26);
+    padding: 5px 10px;
+}
+.button1:hover {
+    opacity:1;
+    background-color:antiquewhite;
+    border: none;
+    border-radius: 20%;
+    color: rgb(70, 0, 26);
+}
+@keyframes blur {
+    0% {filter: blur(0px);}
+    25% {filter: blur(5px);}
+    50% {filter: blur(10px);}
+    75% {filter: blur(15px);}
+    100% {filter: blur(20px);}
+}
+

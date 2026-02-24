@@ -1,0 +1,183 @@
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(104, 19, 65 / 1.0);
+}.bg-img {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;  
+    height: auto;  
+    z-index: -1;
+    pointer-events: none;
+}
+.fraunces-uniquifier{
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 2;
+    font-variation-settings:
+    "WONK" 2;
+  }
+.infobox{
+background-color: sienna;
+width:100%;
+height:20%;
+position: absolute;
+bottom:-20px;
+text-align: center;
+color: antiquewhite;
+}
+.leftbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 20%;
+    background-color: sienna;
+    z-index: 1;
+}
+.rightbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 20%;
+    background-color: sienna;
+    z-index: 1;
+}
+.hotspot {
+    position: absolute;
+    top: 75%;    
+    left: 47%;    
+    width: 80px;  
+    height: 80px;
+    opacity: 0.0; 
+    background: ghostwhite; 
+    cursor: pointer;
+    z-index: 20;
+}
+.hotspot:hover {
+    opacity: 0.1;
+}
+/* Invisible center hotspot: popup only visible on hover */
+.center-hotspot {
+    position: absolute;
+    right: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    z-index: 5;
+    cursor: default;
+}
+.center-popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    background: antiquewhite;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 2px solid sienna;
+    width: 220px;
+    font-size: 0.95rem;
+    color: sienna;
+    text-align: center;
+    white-space: normal;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    pointer-events: none;
+}
+.center-hotspot:hover .center-popup {
+    visibility: visible;
+    opacity: 0.5;
+}
+.center-hotspot:target .center-popup{
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.popup:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: antiquewhite;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: left;
+    border: 3px solid sienna;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+.button1{
+    position: absolute;
+    top: 50%;
+    left: 10%;      
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: sienna;
+    border: none;
+    border-radius: 20%;
+    padding: 16px 28px;
+    color: antiquewhite;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.button2{
+    position: absolute;
+    top: 50%;
+    right: 10%;      
+    transform: translate(50%, -50%);
+    z-index: 10;
+    background-color: sienna;
+    border: none;
+    border-radius: 20%;
+    padding: 16px 28px;
+    color: antiquewhite;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.button1:hover,
+.button2:hover {
+    background-color: rgb(255, 228, 196);
+    color: sienna;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(255, 228, 196);
+    color: sienna;
+    cursor: pointer;
+}
